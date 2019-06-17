@@ -23,16 +23,24 @@ class Employee
     }
     
     init?(employeeId : Int, employeeName : String, employeeEmail : String, employeeSalary : Double) {
-        self.employeeId = 0
-        self.employeeName = String()
-        self.employeeEmail = String()
-        self.employeeSalary = 0.0
+        self.employeeId = employeeId
+        self.employeeName = employeeName
+        self.employeeEmail = employeeEmail
+        self.employeeSalary = employeeSalary
         
         if(employeeSalary < 1000.0)
         {
             return nil
         }
-        
+        self.employeeSalary = employeeSalary
+    }
+    
+    func selSalary(salary: Double) {
+        if salary < 1000 {
+            throws EmployeeError.InvalidSalary()
+            //throw EmployeeError.InvalidSalary(msg: "InvalidSalary",salary: )
+        }
+     self.employeeSalary = salary
     }
     
     
