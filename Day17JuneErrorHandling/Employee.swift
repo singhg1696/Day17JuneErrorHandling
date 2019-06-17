@@ -26,7 +26,6 @@ class Employee
         self.employeeId = employeeId
         self.employeeName = employeeName
         self.employeeEmail = employeeEmail
-        self.employeeSalary = employeeSalary
         
         if(employeeSalary < 1000.0)
         {
@@ -37,7 +36,7 @@ class Employee
     
     func selSalary(salary: Double) {
         if salary < 1000 {
-            throws EmployeeError.InvalidSalary()
+                throw EmployeeError.InvalidSalary
             //throw EmployeeError.InvalidSalary(msg: "InvalidSalary",salary: )
         }
      self.employeeSalary = salary

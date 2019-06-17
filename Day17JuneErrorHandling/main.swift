@@ -44,7 +44,7 @@ catch EmployeeError.InvalidEmail{
 }
     
 catch EmployeeError.InvalidSalary(){
-        print("Invalid Salary")
+        print("msg.self")
 }
    
 catch
